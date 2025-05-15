@@ -1,10 +1,4 @@
-import {
-  pgTable,
-  varchar,
-  text,
-  timestamp,
-  uuid,
-} from "drizzle-orm/pg-core";
+import { pgTable, varchar, text, timestamp, uuid } from "drizzle-orm/pg-core";
 
 export const blog = pgTable("blog", {
   id: uuid().primaryKey().defaultRandom(),
@@ -18,6 +12,4 @@ export const blog = pgTable("blog", {
   headings: varchar({ length: 255 }).notNull(),
   paragraphs: varchar({ length: 1000 }).notNull(),
   tags: text().notNull(),
-  role: varchar({ length: 50 }).default("admin").notNull(),
 });
-

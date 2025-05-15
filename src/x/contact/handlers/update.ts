@@ -5,13 +5,9 @@ import { updatecontactService } from "../services/update";
 export const updatecontact = new Elysia().use(contactModelTypeUpdate).put(
   "/updatecontact",
   async ({ query, body, set }) => {
-    console.log("========>");
-
     try {
       const { id } = query;
       const updatedcontact = await updatecontactService(id, body);
-      console.log("======>11111", updatecontact);
-
       return {
         success: true,
         message: "contact updated successfully",

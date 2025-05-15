@@ -7,7 +7,7 @@ export const deactivateAdmin = new Elysia()
   .post("/deactivate", async ({ query, set }) => {
     try {
       const { email, status } = query;
-      /// Validate adminId
+     
       if (!email || !status) {
         set.status = 400;
         return {
@@ -20,10 +20,10 @@ export const deactivateAdmin = new Elysia()
           ? "Admin deactivated Successfully"
           : "Admin activated Successfully";
 
-        console.log("=====>", query);
+       
 
       const profile = await deactivateAdminService(email, status);
-      console.log("=====>profile", profile);
+      
 
       set.status = 200;
       return {
