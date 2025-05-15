@@ -1,12 +1,10 @@
 import { db } from "../../../databases/postgres/schema";
-import { contact} from "../../../databases/postgres/schema/contact"; 
+import { contact } from "../../../databases/postgres/schema/contact";
 import { eq } from "drizzle-orm";
 
 export default class contactRepository {
   static async create(contactData: typeof contact.$inferInsert) {
     try {
-      console.log("bdkwbkdbq=>",contactData);
-      
       const result = await db.insert(contact).values(contactData).returning();
       return result[0]; // consistent destructuring
     } catch (error) {
@@ -48,7 +46,10 @@ export default class contactRepository {
     }
   }
 
-  static async update(id: string, updateData: Partial<typeof contact.$inferInsert>) {
+  static async update(
+    id: string,
+    updateData: Partial<typeof contact.$inferInsert>
+  ) {
     try {
       const result = await db
         .update(contact)

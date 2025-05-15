@@ -1,6 +1,6 @@
 import { Elysia } from "elysia";
 import { contactModelType } from "../types/createContact";
-import { createcontactService } from "../services/createContact";
+import { createContactService } from "../services/createContact";
 import { ConsoleLogWriter } from "drizzle-orm";
 
 export const createcontact = new Elysia().use(contactModelType).post(
@@ -10,7 +10,7 @@ export const createcontact = new Elysia().use(contactModelType).post(
     try {
       
       
-      const contact = await createcontactService(body);
+      const contact = await createContactService(body);
       
       set.status = 200;
       return {

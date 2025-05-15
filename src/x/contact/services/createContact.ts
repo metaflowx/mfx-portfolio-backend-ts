@@ -1,6 +1,6 @@
 import contactRepository from "../repositories";
 
-export const createcontactService = async (contactData: any) => {
+export const createContactService = async (contactData: any) => {
   const requiredFields = [
     "yourName",
     "email",
@@ -11,15 +11,25 @@ export const createcontactService = async (contactData: any) => {
     "timeLine",
     "discription",
   ];
-  for (const field of requiredFields) {
-    if (contactData[field] === undefined || contactData[field] === null) {
-      throw new Error(`${field} is required.`);
-    }
+
+  const missingFields = requiredFields.filter((field) => {
+    const value = contactData[field];
+    return (
+      value === undefined ||
+      value === null ||
+      (typeof value === "string" && value.trim() === "")
+    );
+  });
+
+  if (missingFields.length > 0) {
+    throw new Error(
+      `Please fill all required fields: ${missingFields.join(", ")}.`
+    );
   }
 
-  const newcontact = await contactRepository.create(contactData);
+  const newContact = await contactRepository.create(contactData);
 
-  if (!newcontact) throw new Error("contact creation failed.");
+  if (!newContact) throw new Error("Contact creation failed.");
 
-  return newcontact;
+  return newContact;
 };
