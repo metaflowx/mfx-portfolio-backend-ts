@@ -29,7 +29,7 @@ const app = new Elysia()
             BearerAuth: {
               type: "http",
               scheme: "bearer",
-              bearerFormat: "JWT", // Optional: Specifies the format
+              bearerFormat: "JWT", 
             },
           },
         },
