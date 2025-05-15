@@ -1,0 +1,76 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1742464718254,
+      "tag": "0000_narrow_cerise",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1744796469681,
+      "tag": "0001_fantastic_iron_lad",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1744968261842,
+      "tag": "0002_mixed_flatman",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1744973338366,
+      "tag": "0003_soft_the_professor",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1745396756101,
+      "tag": "0004_complete_night_thrasher",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1745397109583,
+      "tag": "0005_tiny_rictor",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1745488291129,
+      "tag": "0006_fearless_the_santerians",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1745673931928,
+      "tag": "0007_crazy_gunslinger",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1745845179293,
+      "tag": "0008_opposite_scarlet_witch",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1746091432747,
+      "tag": "0009_milky_shinko_yamashiro",
+      "breakpoints": true
+    }
+  ]
+}
